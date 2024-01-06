@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Slot Booking</title>
+    <style>
+        /* Add your CSS styles here for formatting the page */
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold; 
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+             /* Add your CSS styles here for formatting the form */
+             body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+ 
+h4{
+    font-size: 40px;
+   
+    position: relative;
+    margin-left: 40%;
+    color: black;
+
+}
+    </style>
+</head>
+<body>
+
+    <h4 >USER BOOKING </h4>
+    <div class="container">
+        <h1>Car Parking Booking</h1>
+        <form id="parkingForm" action="submit_booking.php" method="post">
+            <div class="form-group">
+                <label for="name">Owner name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Owner Contact Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="parkingType">Parking Type:</label>
+                <select id="parkingType" name="parkingType" required>
+                    <option value="standard">Standard</option>
+                    <option value="valet">Valet</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+                <label for="checkOutDate">Check-out Date:</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" required>
+            </div>
+            <div class="form-group">
+                <label for="vehicleType">Vehicle Type:</label>
+                <input type="text" id="vehicleType" name="vehicleType" required>
+            </div>
+           
+           
+            <div class="container">
+        
+                <form id="bookingForm" action="process_booking.php" method="post">
+                    <div class="form-group">
+                        <label for="slot">Select a Parking Slot:</label>
+                        <select id="slot" name="slot" required>
+                            <option value="A">Slot A</option>
+                            <option value="B">Slot B</option>
+                            <option value="C">Slot C</option>
+                            <option value="D">Slot D</option>
+                        </select>
+                    </div>
+                    
+                </form>
+            </div>
+            <a href="payment.html
+            "> <button type="submit" >Book Parking</button></a>
+           
+        </form>
+    </div>
+    
+</body>
+</html>
+
